@@ -1,0 +1,33 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system>  <mount point>  <type>  <options>  <dump>  <pass>
+PARTUUID=a74a12c3-de0a-464d-93c2-814e07b91e12  /boot/efi  vfat  umask=0077  0  0
+PARTUUID=63c898ce-b3c8-4594-a39a-d453e924c66a  /recovery  vfat  umask=0077  0  0
+/dev/mapper/cryptswap  none  swap  defaults  0  0
+UUID=f403d1bc-a31a-44ee-80f5-94c786a7b4a7  /  ext4  noatime,errors=remount-ro  0  0
+
+# home
+UUID=85f80944-14c9-4354-bd65-504f8902e107 /home ext4 noatime,errors=remount-ro  0  0
+
+# wolfs
+UUID=434ccf20-f2ff-48ce-ba9e-d71a172e200b /mnt/hdd1 ext4 nosuid,nodev,nofail 0 2
+UUID=c06a8a3d-a8fe-40ef-acf5-a9c77b77b221 /mnt/hdd2 ext4 nosuid,nodev,nofail 0 2
+UUID=7386ec3c-a81b-405d-be4f-a7aad9131942 /mnt/hdd3 ext4 nosuid,nodev,nofail 0 2
+UUID=4b6cd465-55e0-4567-b140-48cc1c732688 /mnt/hdd4 ext4 nosuid,nodev,nofail 0 2
+UUID=e4ea1e4e-c46c-410e-8b8d-e21988971f25 /mnt/hdd5 ext4 nosuid,nodev,nofail 0 2
+UUID=8e87c1e9-1db9-4c5c-87e2-a8680345a014 /mnt/hdd6 ext4 nosuid,nodev,nofail 0 2
+UUID=e0351a6a-701e-409a-b731-98be8ed58cd5 /mnt/hdd7 ext4 nosuid,nodev,nofail 0 2
+
+
+# external
+#UUID=CA2CCC5E2CCC46E3 /mnt/hdd8 ntfs defaults 0 2
+#UUID=62646C67646C4041 /mnt/hdd9 ntfs defaults 0 2
+#UUID=A298665898662ACD /mnt/hdd10 ntfs defaults 0 2
+#UUID=943A538F3A536CEC /mnt/hdd11 ntfs defaults 0 2
+#UUID=5C6208C26208A2BE /mnt/hdd12 ntfs defaults 0 2
+#UUID=F45C5A835C5A4112 /mnt/hdd13 ntfs defaults 0 2
+#UUID=54A2B30DA2B2F31A /mnt/hdd14 ntfs defaults 0 2
